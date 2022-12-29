@@ -1,13 +1,17 @@
 package com.example.inventoryservice.dto;
 
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.bytebuddy.asm.Advice;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class InventoryRequestDto {
+@Builder
+public class InventoryResponse {
     private String skuCode;
-    private Integer quantity;
+    private Boolean isInStock;
 }
