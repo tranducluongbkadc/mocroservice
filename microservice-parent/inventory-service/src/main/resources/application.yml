@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: inventory-service
   datasource:
     url: jdbc:mysql://localhost:3306/inventory_service
     username: root
@@ -9,6 +11,10 @@ spring:
       ddl-auto: update
 server:
   port: 1995
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
 
 
 
